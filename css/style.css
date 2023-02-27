@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bottomGameBackground{
+    display: flex;
+    background: black;
+    width: 30%;
+}
+
+.navGame{
+    background: black;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#0c759f, #E6F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mouse {
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;;
+}
+
+.clouds {
+    position: absolute;
+    margin-top: 20px;
+    width: 550px;
+    animation: clouds-anim 10s infinite linear;
+    animation-play-state: running;
+}
+
+.btn-restart {
+    opacity: 0;
+    padding: 20px 80px 20px 80px;
+    margin: 50px 0 0 84vh;
+    border-radius: 10px;
+    background-color: purple;
+    color: white;
+}
+
+.btn-restart:hover {
+    margin: 50px 0 0 84vh;
+    border-radius: 10px;
+    background-color: green;
+}
+
+.terra {
+    width: 100%;
+    height: 23vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#5e3827, #a18b47);
+}
+
+
+@keyframes clouds-anim {
+    0%{
+        right: -550px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    } to {
+        right: 100%;
+          }
+}
+
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 150px;
+    }
+    50% {
+        bottom: 150px;
+    }
+    60% {
+        bottom: 150px;
+    }
+    100% {
+        bottom: 0;
+    }
+
+}
+
+@keyframes background-animation {
+    0%{
+        right: -80px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
